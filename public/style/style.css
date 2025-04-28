@@ -1,3 +1,47 @@
-p{
-    color: red;
+/* General reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #f4f4f4; /* Light background for the header */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd; /* Optional: adds a subtle border */
+}
+
+/* Name container styling */
+.name-container h1 {
+    font-size: 18px; /* Smaller but visible font size */
+    margin: 0;
+    color: #333; /* Dark text color for readability */
+}
+
+/* Navigation container styling */
+.navigation-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Adds spacing between navigation items */
+}
+
+.navigation-container li {
+    display: inline;
+}
+
+.navigation-container a {
+    text-decoration: none;
+    color: #007BFF; /* Blue color for links */
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navigation-container a:hover {
+    color: #0056b3; /* Darker blue on hover */
 }
