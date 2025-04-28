@@ -2,7 +2,76 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* White background for the body */
+}
+
+/* Main container styling */
+.main-container {
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    background-color: #f0f0f0; /* Couleur de fond douce */
+    gap: 20px; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+}
+
+/* Photo container styling */
+.photo-container {
+    background-color: red; /* Couleur de fond */
+    width: 350px; /* Largeur de la photo */
+    height: 350px; /* Hauteur de la photo */
+    border-radius: 50%; /* Bord arrondi pour un effet circulaire */
+    overflow: hidden; /* Cache les débordements */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+}
+
+/* Text container styling */
+.text-container {
+    width: 400px; /* Largeur du texte */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centre verticalement */
+    align-items: center; /* Centre horizontalement */
+    padding: 20px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Text name title styling */
+.text-name-title {
+    font-size: 30px; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+    font-weight: bold; /* Met le texte en gras */
+    text-align: justify; /* Justifie le texte */
+    align-self: flex-start; /* Aligne le texte à gauche dans le conteneur */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+.text-name-title p {
+    margin: 0; /* Supprime les marges par défaut */
+    line-height: 1.2; /* Réduit l'espacement vertical entre les lignes */
+}
+
+/* Text sub-title styling */
+.text-sub-title {
+    font-size: 18px; /* Taille de la police */
+    color: #555; /* Couleur du texte */
+    font-weight: bold;
+    margin-bottom: -15px; /* Espacement sous le sous-titre */
+    align-self: flex-start;
+    text-align: justify; /* Centre le texte */
+}
+
+/* Text resume styling */
+.text-resume {
+    font-size: 14px; /* Taille de la police */
+    color: #666; /* Couleur du texte */
+    line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+    align-self: flex-start;
+    text-align: justify; /* Centre le texte */
 }
 
 /* Header styling */
@@ -12,26 +81,28 @@ header {
     display: flex;
     align-items: center; /* Ensures vertical alignment of children */
     border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+    flex-wrap: wrap; /* Permet au contenu de passer à la ligne sur petits écrans */
 }
 
 /* Name container styling */
 .name-container {
-    flex: 0; /* Keeps the name container at its natural size */
+    flex: 1; /* Prend tout l'espace disponible */
+    text-align: left; /* Aligne le texte à gauche */
 }
 
 .name-container h1 {
-    font-size: 20px; /* Visible but not too large */
+    font-size: 20px; /* Visible mais pas trop grand */
     margin: 0;
-    color: #333; /* Dark text color for readability */
-    line-height: 1; /* Ensures proper vertical alignment */
-    white-space: nowrap; /* Prevents the name from wrapping to multiple lines */
-    overflow: hidden; /* Ensures no overflow if the text is too long */
-    text-overflow: ellipsis; /* Adds "..." if the text overflows */
+    color: #333; /* Couleur sombre pour le texte */
+    line-height: 1; /* Assure un alignement vertical correct */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    overflow: hidden; /* Cache le débordement si le texte est trop long */
+    text-overflow: ellipsis; /* Ajoute "..." si le texte déborde */
 }
 
 /* Navigation container styling */
 .navigation-container {
-    margin-left: auto; /* Pushes the navigation container to the right */
+    margin-left: auto; /* Pousse la navigation à droite */
 }
 
 .navigation-container ul {
@@ -39,7 +110,7 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px; /* Adds spacing between navigation items */
+    gap: 15px; /* Ajoute un espacement entre les éléments de navigation */
 }
 
 .navigation-container li {
@@ -49,15 +120,70 @@ header {
 .navigation-container a {
     text-decoration: none;
     padding: 10px 15px;
-    background-color: #005c3c; /* Blue background for buttons */
-    color: white; /* White text for contrast */
+    background-color: #005c3c; /* Couleur de fond des boutons */
+    color: white; /* Texte blanc pour le contraste */
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px; /* Rounded corners for button-like appearance */
+    border-radius: 5px; /* Coins arrondis pour un effet bouton */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .navigation-container a:hover {
-    background-color: #c5a35c; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #c5a35c; /* Couleur plus claire au survol */
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Empile les éléments verticalement */
+        gap: 10px; /* Réduit l'espacement entre les éléments */
+    }
+
+    .photo-container,
+    .text-container {
+        width: 90%; /* Prend 90% de la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+
+    .text-name-title {
+        font-size: 20px; /* Réduit la taille de la police */
+    }
+
+    .text-sub-title {
+        font-size: 16px; /* Réduit la taille de la police */
+    }
+
+    .text-resume {
+        font-size: 14px; /* Réduit la taille de la police */
+    }
+
+    header {
+        flex-direction: column; /* Empile les éléments du header */
+        align-items: flex-start; /* Aligne les éléments à gauche */
+    }
+
+    .navigation-container {
+        margin-left: 0; /* Supprime le décalage à droite */
+        margin-top: 10px; /* Ajoute un espacement au-dessus */
+    }
+
+    .navigation-container ul {
+        flex-direction: column; /* Empile les liens verticalement */
+        gap: 10px; /* Réduit l'espacement entre les liens */
+    }
+}
+
+@media (max-width: 480px) {
+    .text-name-title {
+        font-size: 18px; /* Réduit encore la taille de la police */
+    }
+
+    .text-sub-title {
+        font-size: 14px; /* Réduit encore la taille de la police */
+    }
+
+    .text-resume {
+        font-size: 12px; /* Réduit encore la taille de la police */
+    }
 }

@@ -1,0 +1,18 @@
+{
+  "header": {
+    "name": "Hugo Gabriel Pereira de Almeida",
+    "navigation": [
+      { "label": "Profile", "link": "#profile" },
+      { "label": "Projects", "link": "#projects" },
+      { "label": "Contact", "link": "#contact" }
+    ]
+  },
+  "main": {
+    "photo": "path/to/photo.jpg", 
+    "text": {
+      "title": "Hugo Gabriel Pereira de Almeida",
+      "subtitle": "About Me",
+      "resume": "I am a dedicated student at ESEO, a renowned French engineering school, where I am pursuing my studies in advanced engineering disciplines. Through a combination of rigorous coursework and hands-on projects, I am developing a strong foundation in technology, problem-solving, and innovation, preparing for a successful career in the tech industry"
+    }
+  }
+}
