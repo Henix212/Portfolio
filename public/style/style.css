@@ -1,34 +1,45 @@
-/* General reset */
+/* Reset styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #fafafa;
-    color: #333;
+    background-color: #f4f4f4; /* White background for the body */
 }
 
 /* Header styling */
 header {
-    background-color: #f4f4f4; /* Light background for the header */
+    background-color: #f4f4f4; /* Light gray background */
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Keeps the name to the left and the buttons to the right */
-    align-items: center;
-    border-bottom: 1px solid #ddd; /* Optional: adds a subtle border */
+    align-items: center; /* Ensures vertical alignment of children */
+    border-bottom: 1px solid #ddd; /* Subtle border at the bottom */
+}
+
+/* Name container styling */
+.name-container {
+    flex: 0; /* Keeps the name container at its natural size */
 }
 
 .name-container h1 {
-    font-size: 18px; /* Smaller but visible font size */
+    font-size: 20px; /* Visible but not too large */
     margin: 0;
     color: #333; /* Dark text color for readability */
+    line-height: 1; /* Ensures proper vertical alignment */
+    white-space: nowrap; /* Prevents the name from wrapping to multiple lines */
+    overflow: hidden; /* Ensures no overflow if the text is too long */
+    text-overflow: ellipsis; /* Adds "..." if the text overflows */
 }
 
 /* Navigation container styling */
+.navigation-container {
+    margin-left: auto; /* Pushes the navigation container to the right */
+}
+
 .navigation-container ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px; /* Adds spacing between navigation items */
+    gap: 15px; /* Adds spacing between navigation items */
 }
 
 .navigation-container li {
@@ -37,58 +48,16 @@ header {
 
 .navigation-container a {
     text-decoration: none;
-    padding: 10px 20px;
-    background-color: #005c3c; /* Rolex green */
-    color: white; /* White text on green background */
+    padding: 10px 15px;
+    background-color: #005c3c; /* Blue background for buttons */
+    color: white; /* White text for contrast */
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px; /* Rounded corners to make them look like buttons */
-    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners for button-like appearance */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .navigation-container a:hover {
-    background-color: #c5a35c; /* Light gold for hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .name-container h1 {
-        font-size: 22px;
-    }
-
-    .navigation-container ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .navigation-container a {
-        font-size: 18px;
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 15px;
-    }
-
-    .name-container h1 {
-        font-size: 24px;
-    }
-
-    .navigation-container ul {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .navigation-container a {
-        font-size: 20px;
-        padding: 15px 30px;
-    }
+    background-color: #c5a35c; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
