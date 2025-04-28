@@ -2,6 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
 }
 
 /* Header styling */
@@ -14,7 +16,6 @@ header {
     border-bottom: 1px solid #ddd; /* Optional: adds a subtle border */
 }
 
-/* Name container styling */
 .name-container h1 {
     font-size: 18px; /* Smaller but visible font size */
     margin: 0;
@@ -44,4 +45,45 @@ header {
 
 .navigation-container a:hover {
     color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .name-container h1 {
+        font-size: 22px;
+    }
+
+    .navigation-container ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation-container a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    .name-container h1 {
+        font-size: 24px;
+    }
+
+    .navigation-container ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navigation-container a {
+        font-size: 20px;
+    }
 }
