@@ -11,8 +11,8 @@ header {
     background-color: #f4f4f4; /* Light background for the header */
     padding: 10px 20px;
     display: flex;
+    justify-content: space-between; /* Keeps the name to the left and the buttons to the right */
     align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid #ddd; /* Optional: adds a subtle border */
 }
 
@@ -28,7 +28,7 @@ header {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px; /* Adds spacing between navigation items */
+    gap: 20px; /* Adds spacing between navigation items */
 }
 
 .navigation-container li {
@@ -37,14 +37,17 @@ header {
 
 .navigation-container a {
     text-decoration: none;
-    color: #007BFF; /* Blue color for links */
+    padding: 10px 20px;
+    background-color: #005c3c; /* Rolex green */
+    color: white; /* White text on green background */
     font-size: 16px;
     font-weight: bold;
-    transition: color 0.3s ease;
+    border-radius: 5px; /* Rounded corners to make them look like buttons */
+    transition: background-color 0.3s ease;
 }
 
 .navigation-container a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    background-color: #c5a35c; /* Light gold for hover */
 }
 
 /* Responsive Styles */
@@ -66,6 +69,7 @@ header {
 
     .navigation-container a {
         font-size: 18px;
+        padding: 12px 25px;
     }
 }
 
@@ -85,5 +89,6 @@ header {
 
     .navigation-container a {
         font-size: 20px;
+        padding: 15px 30px;
     }
 }
