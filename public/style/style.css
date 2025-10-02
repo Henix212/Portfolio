@@ -8,13 +8,16 @@ grid-row-gap: 7px;
 
 .div1 { 
     grid-area: 5 / 5 / 17 / 17; 
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.7); 
+    border: 2px solid darkred; 
 }
 .div2 { 
     grid-area: 13 / 17 / 15 / 27; 
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.7); 
+    border: 2px solid darkblue; 
 }
 .div3 { 
     grid-area: 7 / 17 / 13 / 27; 
-    background-color: green;
+    background-color: rgba(0, 255, 0, 0.7); 
+    border: 2px solid darkgreen; 
 }
