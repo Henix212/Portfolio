@@ -6,6 +6,15 @@ grid-column-gap: 10px;
 grid-row-gap: 7px;
 }
 
-.div1 { grid-area: 5 / 5 / 17 / 17; }
-.div2 { grid-area: 13 / 17 / 15 / 27; }
-.div3 { grid-area: 7 / 17 / 13 / 27; }
+.div1 { 
+    grid-area: 5 / 5 / 17 / 17; 
+    background-color: red;
+}
+.div2 { 
+    grid-area: 13 / 17 / 15 / 27; 
+    background-color: blue;
+}
+.div3 { 
+    grid-area: 7 / 17 / 13 / 27; 
+    background-color: green;
+}
