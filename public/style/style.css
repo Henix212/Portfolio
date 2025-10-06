@@ -1,9 +1,18 @@
-.body {
+html, body {
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
 }
 
+.body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
 .parent {
+    min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(20, 1fr);
@@ -13,19 +22,19 @@
 }
 
 #photoDiv { 
-    grid-area: 4 / 5 / 18 / 17; 
+    grid-area: 4 / 4 / 18 / 17; 
     background-color: rgba(255, 0, 0, 0.7); 
     border: 2px solid darkred; 
 }
 
 #buttonsDiv { 
-    grid-area: 13 / 17 / 15 / 27; 
+    grid-area: 13 / 17 / 15 / 28; 
     background-color: rgba(0, 0, 255, 0.7); 
     border: 2px solid darkblue; 
 }
 
 #textDiv { 
-    grid-area: 7 / 17 / 13 / 27; 
+    grid-area: 7 / 17 / 13 / 28; 
     background-color: rgba(0, 255, 0, 0.7); 
     border: 2px solid darkgreen; 
 }
