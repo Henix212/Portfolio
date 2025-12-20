@@ -1,482 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio professionnel d'Ingénieur - Excellence technique et Innovation.">
-    <title>Jean Dupont | Ingénieur & Consultant Technique</title>
+    <meta name="description" content="Professional portfolio of an engineer — technical excellence and innovation.">
+    <title> | AI Engineer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --color-navy: #0A2540;       
-            --color-navy-light: #183B5E;
-            --color-charcoal: #1F1F1F;  
-            --color-grey: #5A6B7C;      
-            --color-gold: #C6A75E;      
-            --color-bg: #F4F6F8;        
-            --color-white: #FFFFFF;
-
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
-
-            --spacing-section: 120px;
-            --container-width: 1100px;
-            
-            --transition-slow: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--color-bg);
-            color: var(--color-charcoal);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-serif);
-            font-weight: 700;
-            color: var(--color-navy);
-            line-height: 1.2;
-        }
-
-        p {
-            font-weight: 300;
-            color: var(--color-grey);
-            font-size: 1.05rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition-slow);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        .section {
-            padding: var(--spacing-section) 0;
-        }
-
-        .section-header {
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .section-header::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: var(--color-gold);
-            margin-top: 24px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            border: 1px solid var(--color-navy);
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition-slow);
-        }
-
-        .btn-primary {
-            background-color: var(--color-navy);
-            color: var(--color-white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--color-navy-light);
-            border-color: var(--color-navy-light);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--color-navy);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--color-navy);
-            color: var(--color-white);
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(244, 246, 248, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--color-navy);
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--color-gold);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--color-navy);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--color-gold);
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        #hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--color-navy) 0%, #051424 100%);
-            color: var(--color-white);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            position: relative;
-            z-index: 2;
-        }
-
-        #hero h1 {
-            font-size: 4.5rem;
-            color: var(--color-white);
-            margin-bottom: 24px;
-            line-height: 1.1;
-        }
-
-        #hero .subtitle {
-            font-size: 1.5rem;
-            color: #d0dbe5;
-            font-weight: 300;
-            margin-bottom: 48px;
-            font-family: var(--font-serif);
-            font-style: italic;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 20px;
-        }
-
-        .hero-actions .btn-primary {
-            background-color: var(--color-gold);
-            border-color: var(--color-gold);
-            color: var(--color-navy);
-        }
-        
-        .hero-actions .btn-primary:hover {
-            background-color: #d4b56a;
-        }
-
-        .hero-actions .btn-outline {
-            color: var(--color-white);
-            border-color: rgba(255,255,255,0.3);
-        }
-
-        .hero-actions .btn-outline:hover {
-            background-color: var(--color-white);
-            color: var(--color-navy);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .about-text p {
-            margin-bottom: 24px;
-            text-align: justify;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .stat-item h4 {
-            font-size: 2.5rem;
-            color: var(--color-gold);
-            margin-bottom: 8px;
-        }
-
-        .stat-item span {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            color: var(--color-navy);
-            font-weight: 600;
-        }
-
-        #status {
-            background-color: var(--color-white);
-            border-top: 1px solid rgba(0,0,0,0.05);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .status-box {
-            background-color: var(--color-navy);
-            color: var(--color-white);
-            padding: 60px;
-            border-left: 5px solid var(--color-gold);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .status-content h3 {
-            color: var(--color-white);
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-        
-        .status-content p {
-            color: #d0dbe5;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .project-card {
-            background-color: var(--color-white);
-            border-top: 3px solid transparent;
-            padding: 40px;
-            transition: var(--transition-slow);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-top-color: var(--color-gold);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-        }
-
-        .project-tags {
-            margin: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            padding: 6px 12px;
-            background-color: #F0F2F5;
-            color: var(--color-navy);
-            letter-spacing: 0.5px;
-            font-weight: 500;
-        }
-
-        .project-links {
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            display: flex;
-            gap: 20px;
-        }
-
-        .project-links a {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--color-navy);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .project-links a:hover {
-            color: var(--color-gold);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-
-        .skill-category h3 {
-            font-size: 1.25rem;
-            margin-bottom: 24px;
-            font-family: var(--font-sans);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--color-grey);
-        }
-
-        .skill-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            color: var(--color-navy);
-            font-weight: 500;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--color-navy);
-            color: var(--color-white);
-            padding: 80px 0 40px;
-            text-align: center;
-        }
-
-        .footer-content {
-            margin-bottom: 40px;
-        }
-
-        .footer-content h2 {
-            color: var(--color-white);
-            margin-bottom: 24px;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .social-links a {
-            color: #d0dbe5;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .social-links a:hover {
-            color: var(--color-gold);
-        }
-
-        .copyright {
-            color: rgba(255,255,255,0.3);
-            font-size: 0.8rem;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --spacing-section: 80px;
-            }
-
-            #hero h1 {
-                font-size: 3rem;
-            }
-            
-            .nav-links {
-                display: none; 
-            }
-
-            .about-grid, .status-box, .skills-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-        }
-    </style>
 </head>
 <body>
-
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Jean<span>Dupont</span>.</div>
+                <div class="logo">Hugo Gabriel<span>Pereira de Almeida</span>.</div>
                 <div class="nav-links">
-                    <a href="#about">Profil</a>
-                    <a href="#projects">Projets</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
                     <a href="#expertise">Expertise</a>
                     <a href="mailto:jean.dupont@email.com">Contact</a>
                 </div>
@@ -487,11 +28,11 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content reveal">
-                <h1>Ingénierie Logicielle <br>& Architecture Système</h1>
-                <p class="subtitle">Une approche rigoureuse de l'innovation technologique.</p>
+                <h1>AI Engineering</h1>
+                <p class="subtitle">A rigorous approach to technological innovation.</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Mes Réalisations</a>
-                    <a href="#about" class="btn btn-outline">En Savoir Plus</a>
+                    <a href="#projects" class="btn btn-primary">My Work</a>
+                    <a href="#about" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
         </div>
@@ -500,29 +41,29 @@
     <section id="about" class="section">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Profil Professionnel</h2>
+                <h2>Professional Profile</h2>
             </div>
             <div class="about-grid reveal">
                 <div class="about-text">
                     <p>
-                        Ingénieur spécialisé dans le développement d'architectures robustes et évolutives, je combine expertise technique et vision stratégique. Mon approche se fonde sur la conviction que la qualité du code est le reflet de la qualité de la réflexion.
+                        Engineer specialized in developing robust and scalable architectures, I combine technical expertise with strategic vision. My approach is based on the belief that code quality reflects the quality of thinking.
                     </p>
                     <p>
-                        Fort de 5 années d'expérience dans des environnements exigeants, j'accompagne aujourd'hui les entreprises dans la conception de solutions durables, en privilégiant la sécurité, la performance et la maintenabilité.
+                        With 5 years of experience in demanding environments, I help companies design sustainable solutions, prioritizing security, performance and maintainability.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
                             <h4>05</h4>
-                            <span>Années d'Expérience</span>
+                            <span>Years Experience</span>
                         </div>
                         <div class="stat-item">
                             <h4>20+</h4>
-                            <span>Projets Livrés</span>
+                            <span>Projects Delivered</span>
                         </div>
                     </div>
                 </div>
                 <div style="background-color: #E0E4E8; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; border: 1px solid #d1d9e0;">
-                    <span style="color: var(--color-navy); font-family: var(--font-serif); font-style: italic;">[Espace Photo Professionnelle]</span>
+                    <span style="color: var(--color-navy); font-family: var(--font-serif); font-style: italic;">[Professional Photo Area]</span>
                 </div>
             </div>
         </div>
@@ -532,11 +73,11 @@
         <div class="container">
             <div class="status-box reveal">
                 <div class="status-content">
-                    <h3>Disponibilité Actuelle</h3>
-                    <p>À la recherche d'une opportunité en CDI ou Mission Longue.</p>
-                    <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Cibles : Architecture Cloud, Fintech, Industrie 4.0</p>
+                    <h3>Current Availability</h3>
+                    <p>Seeking a full-time position or long-term contract.</p>
+                    <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Targets: Cloud Architecture, Fintech, Industry 4.0</p>
                 </div>
-                <a href="mailto:jean.dupont@email.com" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-navy); border: none;">Discutons-en</a>
+                <a href="mailto:jean.dupont@email.com" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-navy); border: none;">Let's talk</a>
             </div>
         </div>
     </section>
@@ -544,14 +85,14 @@
     <section id="projects" class="section" style="background-color: var(--color-bg);">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Sélection de Projets</h2>
+                <h2>Selected Projects</h2>
             </div>
             <div class="projects-grid">
                 
                 <article class="project-card reveal">
                     <div>
-                        <h3>Algorithme de Prédiction</h3>
-                        <p>Développement d'un module d'analyse prédictive pour une plateforme financière. Optimisation des temps de calcul de 40%.</p>
+                        <h3>Prediction Algorithm</h3>
+                        <p>Developed a predictive analytics module for a financial platform. Improved computation times by 40%.</p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">TensorFlow</span>
@@ -559,15 +100,15 @@
                         </div>
                     </div>
                     <div class="project-links">
-                        <a href="#">Voir le code &rarr;</a>
-                        <a href="#">Étude de cas &rarr;</a>
+                        <a href="#">View code &rarr;</a>
+                        <a href="#">Case study &rarr;</a>
                     </div>
                 </article>
 
                 <article class="project-card reveal">
                     <div>
-                        <h3>Architecture Microservices</h3>
-                        <p>Refonte complète du backend monolithique d'un client logistique vers une architecture distribuée résiliente.</p>
+                        <h3>Microservices Architecture</h3>
+                        <p>Complete refactor of a logistics client's monolithic backend into a resilient distributed architecture.</p>
                         <div class="project-tags">
                             <span class="tag">Docker</span>
                             <span class="tag">Kubernetes</span>
@@ -582,16 +123,16 @@
                 <article class="project-card reveal">
                     <div>
                         <h3>Secure Banking API</h3>
-                        <p>Conception d'une API RESTful conforme aux normes bancaires (DSP2) avec authentification OAuth2 renforcée.</p>
+                        <p>Designed a RESTful API compliant with banking standards (PSD2) with enhanced OAuth2 authentication.</p>
                         <div class="project-tags">
                             <span class="tag">Node.js</span>
                             <span class="tag">PostgreSQL</span>
-                            <span class="tag">Sécurité</span>
+                            <span class="tag">Security</span>
                         </div>
                     </div>
                     <div class="project-links">
                         <a href="#">Documentation &rarr;</a>
-                        <a href="#">Démo &rarr;</a>
+                        <a href="#">Demo &rarr;</a>
                     </div>
                 </article>
 
@@ -602,11 +143,11 @@
     <section id="expertise" class="section" style="background-color: var(--color-white);">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Domaines d'Expertise</h2>
+                <h2>Areas of Expertise</h2>
             </div>
             <div class="skills-grid reveal">
                 <div class="skill-category">
-                    <h3>Ingénierie Backend</h3>
+                    <h3>Backend Engineering</h3>
                     <ul class="skill-list">
                         <li>Python / Django</li>
                         <li>Java / Spring Boot</li>
@@ -624,12 +165,12 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Méthodologies</h3>
+                    <h3>Methodologies</h3>
                     <ul class="skill-list">
                         <li>Agile / Scrum</li>
-                        <li>Architecture Hexagonale</li>
+                        <li>Hexagonal Architecture</li>
                         <li>TDD / BDD</li>
-                        <li>Audit de Code</li>
+                        <li>Code Review</li>
                     </ul>
                 </div>
             </div>
@@ -640,7 +181,7 @@
         <div class="container">
             <div class="footer-content">
                 <h2>Jean Dupont</h2>
-                <p style="color: rgba(255,255,255,0.6);">Ingénieur Logiciel & Consultant Technique</p>
+                <p style="color: rgba(255,255,255,0.6);">Software Engineer & Technical Consultant</p>
             </div>
             
             <div class="social-links">
@@ -650,8 +191,8 @@
             </div>
             
             <div class="copyright">
-                &copy; 2024 Jean Dupont. Tous droits réservés. <br>
-                Conçu avec rigueur et sobriété.
+                &copy; 2024 Jean Dupont. All rights reserved. <br>
+                Designed with rigor and simplicity.
             </div>
         </div>
     </footer>
@@ -666,9 +207,7 @@
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        // Optionnel : arrêter d'observer une fois apparu
-                        // observer.unobserve(entry.target); 
+                        entry.target.classList.add('active')
                     }
                 });
             }, observerOptions);
