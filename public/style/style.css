@@ -1,18 +1,15 @@
 :root {
-    /* Palette Institutionnelle */
-    --color-navy: #0A2540;       /* Bleu Profond JP Morgan/Stripe */
-    --color-navy-light: #183B5E; /* Bleu plus clair pour hover */
-    --color-charcoal: #1F1F1F;   /* Texte principal */
-    --color-grey: #5A6B7C;       /* Texte secondaire */
-    --color-gold: #C6A75E;       /* Accent Premium (Doré mat) */
-    --color-bg: #F4F6F8;         /* Blanc cassé / Ivoire */
+    --color-navy: #0A2540;       
+    --color-navy-light: #183B5E; 
+    --color-charcoal: #1F1F1F;   
+    --color-grey: #5A6B7C;      
+    --color-gold: #C6A75E;       
+    --color-bg: #F4F6F8;         
     --color-white: #FFFFFF;
 
-    /* Typographie */
     --font-serif: 'Playfair Display', serif;
     --font-sans: 'Inter', sans-serif;
 
-    /* Espacement */
     --spacing-section: 120px;
     --container-width: 1100px;
     
@@ -61,7 +58,6 @@ ul {
     list-style: none;
 }
 
-/* --- LAYOUT UTILS --- */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -120,7 +116,6 @@ ul {
     color: var(--color-white);
 }
 
-/* --- HEADER --- */
 header {
     position: fixed;
     top: 0;
@@ -178,7 +173,6 @@ nav {
     width: 100%;
 }
 
-/* --- HERO SECTION --- */
 #hero {
     height: 100vh;
     display: flex;
@@ -236,7 +230,6 @@ nav {
     color: var(--color-navy);
 }
 
-/* --- ABOUT --- */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -270,7 +263,6 @@ nav {
     font-weight: 600;
 }
 
-/* --- CURRENT SEARCH (Status) --- */
 #status {
     background-color: var(--color-white);
     border-top: 1px solid rgba(0,0,0,0.05);
@@ -299,7 +291,6 @@ nav {
     color: #d0dbe5;
 }
 
-/* --- PROJECTS --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -367,7 +358,6 @@ nav {
     color: var(--color-gold);
 }
 
-/* --- EXPERTISE --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -392,7 +382,6 @@ nav {
     justify-content: space-between;
 }
 
-/* --- FOOTER --- */
 footer {
     background-color: var(--color-navy);
     color: var(--color-white);
@@ -435,7 +424,6 @@ footer {
     padding-top: 20px;
 }
 
-/* --- ANIMATIONS (Micro-interactions) --- */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -447,7 +435,6 @@ footer {
     transform: translateY(0);
 }
 
-/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
     :root {
         --spacing-section: 80px;
@@ -458,7 +445,7 @@ footer {
     }
     
     .nav-links {
-        display: none; /* Simplification pour mobile */
+        display: none;
     }
 
     .about-grid, .status-box, .skills-grid {
