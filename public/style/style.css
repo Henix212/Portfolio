@@ -243,7 +243,7 @@ nav {
 }
 
 .about-stats {
-    display: grid;
+    display: grid;  
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-top: 40px;
@@ -407,13 +407,14 @@ footer {
 
 .photo-wrapper { display:flex; justify-content:center; align-items:center; }
 .profile-photo {
-    width:100%;
-    max-width:320px;
-    max-height:320px;
-    height:auto;
-    border-radius:50%;     
-    object-fit:cover;
+    width: min(320px, 40vw);
+    aspect-ratio: 1 / 1; /* keep square so 50% border-radius makes a perfect circle */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: block;
+    max-width: 100%;
 }
 
 /* container for the photo — transparent and without border */
@@ -473,5 +474,10 @@ footer {
     .about-grid, .status-box, .skills-grid {
         grid-template-columns: 1fr;
         gap: 40px;
+    }
+
+    .profile-photo {
+        width: min(220px, 50vw);
+        aspect-ratio: 1 / 1;
     }
 }
