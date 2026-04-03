@@ -3,204 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI engineering portfolio of Hugo Gabriel Pereira de Almeida — building production-ready ML systems and applied AI solutions.">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="public/style/style.css">
+    <title>Hugo Gabriel Pereira de Almeida</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/style/style.css">
+    <script src="public/script/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Hugo Gabriel<span> Pereira de Almeida</span></div>
-                <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#expertise">Expertise</a>
-                    <a href="mailto:hugogpdealmeida@gmail.com">Contact</a>
-                </div>
-            </nav>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Hugo <em>Gabriel</em></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#expertise">Skills</a>
+        <a href="mailto:hugogpdealmeida@gmail.com">Contact</a>
+      </div>
+      <a href="public/files/HugoPereira_Resume.pdf" target="_blank" class="nav-cv">CV ↓</a>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-tag">AI Engineering · Quantitative Finance</div>
+      <h1 class="hero-name">Hugo Gabriel<br><span>Pereira de Almeida</span></h1>
+      <p class="hero-sub">Bridging advanced machine learning and financial mathematics — SNCF AI Engineer Apprentice, ESEO 2027.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-solid">Selected Work</a>
+        <a href="#about" class="btn btn-ghost">About Me</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge">Python · C · C++</span>
+        <span class="badge">PyTorch · TensorFlow</span>
+        <span class="badge">Reinforcement Learning</span>
+        <span class="badge">Quantitative Finance</span>
+        <span class="badge">TOEIC 925 / 990</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="status">
+  <div class="container">
+    <div class="status-inner">
+      <div class="status-text reveal">
+        <div class="status-label"><span class="sdot"></span>Currently available</div>
+        <h3>Seeking internship — Summer 2026</h3>
+        <p>3-month on-site opportunity abroad · July – September 2026<br>Targets: Applied AI · Quantitative Finance · Fintech · Research</p>
+      </div>
+      <a href="mailto:hugogpdealmeida@gmail.com" class="btn btn-solid reveal">Get in touch →</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="reveal"><h2>Professional Profile</h2><span class="rule"></span></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>AI engineering apprentice within the Artificial Intelligence division of SNCF Voyageurs' Engineering and Rolling Stock Center, working on obstacle detection, map-based localization and benchmarking AI models for real-world railway deployment.</p>
+        <p>Alongside engineering training at ESEO Angers (Information Systems & AI, class of 2027), I pursue independent research at the intersection of machine learning and quantitative finance — building trading systems, RL-driven portfolio optimization, and HFT infrastructure in C++.</p>
+        <p>Portuguese studying in France, speaks in four languages, driven by analytical rigor and a fast-learning mindset. Currently seeking a <strong>3-month international internship</strong> in applied AI or finance for Summer 2026.</p>
+        <div class="langs-row">
+          <div class="lang-chip"><strong>Portuguese</strong><span>Native</span></div>
+          <div class="lang-chip"><strong>French</strong><span>Bilingual</span></div>
+          <div class="lang-chip"><strong>English</strong><span>C1+ · TOEIC 925</span></div>
+          <div class="lang-chip"><strong>Spanish</strong><span>B2+</span></div>
         </div>
-    </header>
+      </div>
+      <div class="photo-wrap reveal">
+        <img src="images/profile.jpg" alt="Hugo Gabriel Pereira de Almeida" class="profile-photo"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" loading="lazy">
+        <div class="photo-placeholder">HG</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content reveal">
-                <h1>Hugo Gabriel Pereira de Almeida</h1>
-                <p class="subtitle">Engineering student passionate about artificial intelligence, highly motivated to learn and grow in fields that truly inspire me, particularly AI and finance.</p>
-                <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">My Work</a>
-                    <a href="#about" class="btn btn-outline">Learn More</a>
-                </div>
-            </div>
+<section id="experience" class="section">
+  <div class="container">
+    <div class="reveal"><h2>Experience</h2><span class="rule"></span></div>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div><div class="tl-date">Sept 2025 – Present</div><div class="tl-loc">Le Mans, France</div></div>
+        <div class="tl-body">
+          <h3>Work-Study IT Engineer — AI Department</h3>
+          <div class="tl-co">SNCF Voyageurs · CIM</div>
+          <p>Mission focused on obstacle detection and autonomous localization. Benchmarking and deploying AI models to achieve robust map-based localization and alignment. Developing expertise in deep learning, computer vision and odometry in a production railway environment.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Professional Profile</h2>
-            </div>
-            <div class="about-grid reveal">
-                 <div class="about-text">
-                    <p>
-                        AI engineering apprentice within the Artificial Intelligence division of SNCF Voyageurs’ Engineering and Rolling Stock Center (CIM), working on applied AI projects in the railway industry.
-                    </p>
-                    <p>
-                        I am currently seeking a 3-month internship in applied AI for finance (Summer 2026), with the goal of gaining international experience and contributing to real-world financial ML/AI applications.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                           <!--<h4>05</h4>
-                            <span>Years Experience</span> -->
-                        </div>
-                        <div class="stat-item">
-                            <!--<h4>5+</h4>
-                            <span>Projects Delivered</span> -->
-                        </div>
-                    </div> 
-                </div> 
-                <div class="photo-panel">
-                    <div class="photo-wrapper">
-                        <img src="images/profile.jpg"
-                             alt="Hugo Gabriel Pereira de Almeida — Professional photo"
-                             class="profile-photo"
-                             loading="lazy"
-                             decoding="async">
-                    </div>
-                </div>
-            </div>
+      <div class="tl-item">
+        <div><div class="tl-date">Feb 2026 – Present</div><div class="tl-loc">Euronext Trading Game</div></div>
+        <div class="tl-body">
+          <h3>Portfolio Manager — Trading Simulation</h3>
+          <div class="tl-co">NextWize</div>
+          <p>Building and actively managing a Euronext portfolio within a competitive trading game framework. Applying quantitative reasoning to asset selection and reallocation decisions to improve performance scores.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="status" class="section">
-        <div class="container">
-            <div class="status-box reveal">
-                <div class="status-content">
-                    <h3>Current Availability</h3>
-                    <p>Available for a 3-month internship abroad (Summer 2026, Jully–September). Open to on-site opportunities.</p>
-                    <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">Targets: Applied AI, Fintech, Finance, Research teams</p>
-                </div>
-                <a href="mailto:hugo.gabriel@example.com" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-navy); border: none;">Let's talk</a>
-            </div>
+      <div class="tl-item">
+        <div><div class="tl-date">Jun – Jul 2024</div><div class="tl-loc">Dijon, France</div></div>
+        <div class="tl-body">
+          <h3>IT Intern</h3>
+          <div class="tl-co">LEAD</div>
+          <p>Multidisciplinary AI & healthcare project. Developed machine learning models with Python, strengthened model evaluation techniques, and built a user-friendly GUI for research use.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="projects" class="section" style="background-color: var(--color-bg);">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Selected Projects</h2>
-            </div>
-            <div class="projects-grid">
-                
-                <article class="project-card reveal">
-                    <div>
-                        <h3>OptiFolio</h3>
-                        <p>Real-time optimization of a quantitative investment portfolio using Reinforcement Learning techniques</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Gymnasium</span>
-                            <span class="tag">Reinforcement Learning</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Henix212/OptiFolio.git">View code &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal">
-                    <div>
-                        <h3>Cerberus</h3>
-                        <p>Credit Card Fraud Detection via Autoencoder-Based Anomaly Detection Trained on Normal Transaction Data</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Scikit-learn</span>
-                            <span class="tag">Kaggle</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Henix212/Cerberus.git">View code &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal">
-                    <div>
-                        <h3>GymansiumRL</h3>
-                        <p>A comprehensive repository for experimenting with all OpenAI Gymnasium environments</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">PyTorch</span>
-                            <span class="tag">Gymnasium</span>
-                            <span class="tag">Reinforcement Learning</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Henix212/GymansiumRL.git">View code &rarr;</a>
-                    </div>
-                </article>
-
-            </div>
+      <div class="tl-item">
+        <div><div class="tl-date">Jun – Jul 2023</div><div class="tl-loc">Dijon, France</div></div>
+        <div class="tl-body">
+          <h3>IT Intern</h3>
+          <div class="tl-co">CHU Dijon</div>
+          <p>Developed an educational game in Scratch on healthcare topics, presented at DataKids — a public outreach event for students from primary through high school. Participated in event organisation and engaged with researchers on AI topics.</p>
         </div>
-    </section>
+      </div>
 
-    <section id="expertise" class="section" style="background-color: var(--color-white);">
-        <div class="container">
-            <div class="section-header reveal">
-                <h2>Areas of Expertise</h2>
-            </div>
-            <div class="skills-grid reveal">
-                <div class="skill-category">
-                    <h3>Machine Learning & AI</h3>
-                    <ul class="skill-list">
-                        <li>Python / PyTorch</li>
-                        <li>TensorFlow / scikit-learn</li>
-                        <li>ML / Deep Learning / Reinforcement Learning</li>
-                        <li>Model Evaluation & Experimentation</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>MLOps & Infrastructure</h3>
-                    <ul class="skill-list"> 
-                        <li>Docker</li>
-                        <li>GitHub</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Software & Research Practices</h3>
-                    <ul class="skill-list">
-                        <li>Agile</li>
-                        <li>Experimentation & Reproducibility</li>
-                        <li>Code Review</li>
-                        <li>Data Engineering</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <div class="container">
-                <div class="footer-content">
-                <h2>Hugo Gabriel Pereira de Almeida</h2>
-                <p style="color: rgba(255,255,255,0.6);">AI Engineer Apprentice</p>
-            </div>
-            
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/hugo-gabriel-pereira-de-almeida-9a3b46260/">LinkedIn</a>
-                <a href="https://github.com/Henix212">GitHub</a>
-                <a href="mailto:hugo.gabriel@example.com">Email</a>
-            </div>
-            
-            <div class="copyright">
-                &copy; 2025 Hugo Gabriel Pereira de Almeida. All rights reserved. <br>
-                Designed with rigor and simplicity.
-            </div>
+<section id="projects" class="section">
+  <div class="container">
+    <div class="reveal"><h2>Selected Projects</h2><span class="rule"></span></div>
+    <div class="projects-grid">
+
+      <article class="pcard">
+        <div>
+          <div class="pstatus s-active">● Active</div>
+          <h3>UDS-OB-HFT</h3>
+          <p>High-Frequency Trading orderbook and HFT client powered by ML in C++. Uses Unix Domain Sockets for low-latency inter-process communication and latency simulation.</p>
+          <div class="ptags"><span class="tag">C++</span><span class="tag">Unix Sockets</span><span class="tag">HFT</span><span class="tag">Orderbook</span></div>
         </div>
-    </footer>
-    <script src="public/script/main.js" defer></script>
+        <div class="pfooter">
+          <div class="pmetric"><small>Domain</small>HFT</div>
+          <a href="https://github.com/Henix212/UDS-OB-HFT.git" class="plink">Code <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div>
+          <div class="pstatus s-active">● Active</div>
+          <h3>Quant-Strat</h3>
+          <p>Repository implementing quantitative trading strategies with independent modules per strategy. Integrates algorithmic logic, rigorous back-testing and performance analytics (Alpha, Beta, Sharpe, Volatility).</p>
+          <div class="ptags"><span class="tag">Python</span><span class="tag">Backtesting</span><span class="tag">Quant Finance</span></div>
+        </div>
+        <div class="pfooter">
+          <div class="pmetric"><small>Focus</small>α · β · SR</div>
+          <a href="https://github.com/Henix212/Quant-Strat.git" class="plink">Code <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div>
+          <div class="pstatus s-done">✓ Completed</div>
+          <h3>OptiFolio</h3>
+          <p>RL model for dynamic asset allocation across GLD, USO and URTH ETFs. Reward optimization for improved performance and risk control. Technical report available.</p>
+          <div class="ptags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Gymnasium</span><span class="tag">PPO</span></div>
+        </div>
+        <div class="pfooter">
+          <div class="pmetric">1.71<small>Sharpe Ratio</small></div>
+          <a href="https://github.com/Henix212/OptiFolio.git" class="plink">Code <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div>
+          <div class="pstatus s-done">✓ Completed</div>
+          <h3>Cerberus</h3>
+          <p>Credit card fraud detection via Autoencoder-based anomaly detection trained on normal transaction data — unsupervised approach to identify outliers without labeled fraud examples.</p>
+          <div class="ptags"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Autoencoder</span><span class="tag">Kaggle</span></div>
+        </div>
+        <div class="pfooter">
+          <div class="pmetric"><small>Method</small>Anomaly</div>
+          <a href="https://github.com/Henix212/Cerberus.git" class="plink">Code <span class="arr">→</span></a>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div>
+          <div class="pstatus s-done">✓ Completed</div>
+          <h3>StockAuto</h3>
+          <p>Complete stock management automation system in C for STM32 microcontrollers, focused on efficiency and low-level memory management.</p>
+          <div class="ptags"><span class="tag">C</span><span class="tag">STM32</span><span class="tag">Embedded</span></div>
+        </div>
+        <div class="pfooter">
+          <div class="pmetric"><small>Stack</small>Embedded C</div>
+          <a href="https://github.com/Henix212/StockAuto.git" class="plink">Code <span class="arr">→</span></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="expertise" class="section">
+  <div class="container">
+    <div class="reveal"><h2>Areas of Expertise</h2><span class="rule"></span></div>
+    <div class="skills-grid reveal">
+      <div class="scat">
+        <h4>AI & Machine Learning</h4>
+        <ul class="slist">
+          <li>Python · PyTorch · TensorFlow</li>
+          <li>Scikit-learn · Gymnasium</li>
+          <li>Reinforcement Learning (PPO)</li>
+          <li>Deep Learning · Autoencoders</li>
+          <li>Computer Vision · Odometry</li>
+          <li>Model Evaluation & Experiments</li>
+        </ul>
+      </div>
+      <div class="scat">
+        <h4>Quantitative Finance</h4>
+        <ul class="slist">
+          <li>Portfolio Optimisation</li>
+          <li>Quantitative Strategies</li>
+          <li>Backtesting & Performance Analytics</li>
+          <li>Alpha · Beta · Sharpe · Volatility</li>
+          <li>High-Frequency Trading (C++)</li>
+          <li>Yale Financial Markets (In progress)</li>
+        </ul>
+      </div>
+      <div class="scat">
+        <h4>Engineering & Practices</h4>
+        <ul class="slist">
+          <li>Python · C · C++ · MATLAB · SQL</li>
+          <li>Docker · Git · GitHub</li>
+          <li>Unix / Linux Systems</li>
+          <li>Agile · Technical Writing</li>
+          <li>Data Engineering</li>
+          <li>Embedded Systems (STM32)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certs" class="section">
+  <div class="container">
+    <div class="reveal"><h2>Certifications</h2><span class="rule"></span></div>
+    <div class="certs-grid">
+      <div class="ccard">
+        <div class="cissuer">Yale University</div>
+        <h4>Financial Markets</h4>
+        <div class="cwip">In progress</div>
+      </div>
+      <div class="ccard">
+        <div class="cissuer">ETS / TOEIC</div>
+        <h4>TOEIC — 925 / 990</h4>
+        <div class="cdate">March 2025 · Valid until 2027</div>
+      </div>
+      <div class="ccard">
+        <div class="cissuer">Nvidia Deep Learning Institute</div>
+        <h4>Getting Started with Deep Learning</h4>
+        <div class="cdate">October 2025</div>
+      </div>
+      <div class="ccard">
+        <div class="cissuer">Cambridge Assessment</div>
+        <h4>CAE — Certificate in Advanced English</h4>
+        <div class="cdate">May 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <h2>Hugo Gabriel Pereira de Almeida</h2>
+    <div class="frole">AI Engineer Apprentice · ESEO 2027</div>
+    <div class="slinks">
+      <a href="https://www.linkedin.com/in/hugo-gabriel-pereira-de-almeida-9a3b46260/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Henix212" target="_blank">GitHub</a>
+      <a href="mailto:hugogpdealmeida@gmail.com">Email</a>
+      <a href="public/files/HugoPereira_Resume.pdf" target="_blank">CV / Résumé</a>
+    </div>
+    <div class="copy">&copy; 2026 Hugo Gabriel Pereira de Almeida · Designed with rigor and simplicity.</div>
+  </div>
+</footer>
 </body>
 </html>
