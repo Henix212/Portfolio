@@ -175,7 +175,6 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 2
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background: var(--navy);
     position: relative;
     overflow: hidden;
@@ -279,6 +278,8 @@ nav { display: flex; justify-content: space-between; align-items: center; gap: 2
 .hero-contact {
     position: relative;
     z-index: 2;
+    margin-top: auto;
+    width: 100%;
     border-top: 1px solid rgba(255, 255, 255, .06);
     background: rgba(0, 0, 0, .15)
 }
