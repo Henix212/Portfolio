@@ -1,24 +1,36 @@
 import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/badge'
-import { stackTools } from '@/data/stack'
+import { skillGroups } from '@/data/stack'
 
 export function StackBadges() {
   return (
-    <section id="stack" className="border-b border-slate-800 bg-slate-900/30">
-      <div className="mx-auto max-w-6xl px-6 py-14">
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-50">Stack / Tools</h2>
-        <p className="mt-2 text-sm text-slate-400">Languages, quant tooling, and systems used across research and infra.</p>
+    <section id="skills" className="border-b border-slate-800 bg-slate-900/30">
+      <div className="mx-auto max-w-5xl px-6 py-16">
+        <h2 className="font-serif text-3xl text-slate-50">Technical Skills</h2>
+        <div className="mt-3 h-px w-10 bg-bronze" aria-hidden />
+
         <motion.div
-          className="mt-8 flex flex-wrap gap-2"
+          className="mt-10 grid gap-8 sm:grid-cols-2"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.35 }}
         >
-          {stackTools.map((tool) => (
-            <Badge key={tool} className="px-3 py-1.5 text-sm">
-              {tool}
-            </Badge>
+          {skillGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="border-b border-slate-800 pb-2 font-mono text-xs text-bronze">
+                {group.title}
+              </h3>
+              <ul className="mt-2">
+                {group.items.map((item) => (
+                  <li
+                    key={item}
+                    className="border-b border-slate-800/80 py-2 text-sm text-slate-400 last:border-b-0"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </motion.div>
       </div>

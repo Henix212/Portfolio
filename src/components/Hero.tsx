@@ -1,47 +1,63 @@
 import { motion } from 'framer-motion'
-import { EquityCurveChart } from '@/components/EquityCurveChart'
 import { Button } from '@/components/ui/button'
-import { MOCK_DISCLAIMER } from '@/data/metrics'
-
-const CV_HREF = './files/Hugo_Pereira_de_Almeida_CV_Quant.pdf'
+import { profile } from '@/data/profile'
 
 export function Hero() {
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-[92vh] flex-col justify-center overflow-hidden border-b border-slate-800"
-    >
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <EquityCurveChart className="h-full w-full" />
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/80 to-slate-950" />
-
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
+    <section id="hero" className="border-b border-slate-800">
+      <div className="mx-auto max-w-5xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl rounded-2xl border border-slate-800/80 bg-slate-950/55 p-8 shadow-2xl shadow-cyan-950/20 backdrop-blur-xl md:p-10"
+          transition={{ duration: 0.45 }}
         >
-          <p className="font-mono text-xs text-cyan-400/90">Hugo Gabriel Pereira de Almeida</p>
-          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl md:text-5xl">
-            Quantitative Researcher &amp; Algorithmic Trader
-          </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400 md:text-lg">
-            Applied Mathematics &amp; AI · low-latency C++ trading infrastructure · deep learning for
-            quantitative research. ESEO · SNCF Voyageurs Matériel · IUM Monaco.
+          <p className="font-mono text-xs text-slate-500">
+            {profile.location} — open to {profile.relocation}
           </p>
+          <h1 className="mt-4 font-serif text-4xl font-normal tracking-tight text-slate-50 sm:text-5xl md:text-6xl">
+            {profile.name}
+          </h1>
+          <p className="mt-6 max-w-2xl font-serif text-lg leading-snug text-slate-200 md:text-xl">
+            {profile.headline}
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">{profile.summary}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#projects">
-              <Button size="lg">View strategies</Button>
+              <Button size="lg">Selected work</Button>
             </a>
-            <a href={CV_HREF} target="_blank" rel="noopener noreferrer">
+            <a href={profile.cvHref} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline">
                 Download CV
               </Button>
             </a>
           </div>
-          <p className="mt-6 font-mono text-[10px] text-slate-600">{MOCK_DISCLAIMER} — equity curve</p>
+          <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-slate-500">
+            <a href={`mailto:${profile.email}`} className="hover:text-slate-300">
+              {profile.email}
+            </a>
+            <span aria-hidden>/</span>
+            <a href={profile.phoneHref} className="hover:text-slate-300">
+              {profile.phone}
+            </a>
+            <span aria-hidden>/</span>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-300"
+            >
+              LinkedIn
+            </a>
+            <span aria-hidden>/</span>
+            <a
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-300"
+            >
+              GitHub
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

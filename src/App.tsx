@@ -1,10 +1,14 @@
+import { About } from '@/components/About'
+import { Certs } from '@/components/Certs'
+import { Education } from '@/components/Education'
+import { Experience } from '@/components/Experience'
 import { Hero } from '@/components/Hero'
-import { MetricsStrip } from '@/components/MetricsStrip'
 import { ProjectsGrid } from '@/components/ProjectsGrid'
 import { ResearchList } from '@/components/ResearchList'
 import { SiteFooter } from '@/components/SiteFooter'
 import { SiteHeader } from '@/components/SiteHeader'
 import { StackBadges } from '@/components/StackBadges'
+import { StatusBanner } from '@/components/StatusBanner'
 
 export default function App() {
   return (
@@ -12,10 +16,14 @@ export default function App() {
       <SiteHeader />
       <main>
         <Hero />
-        <MetricsStrip />
+        <StatusBanner />
+        <About />
+        <Experience />
         <ProjectsGrid />
-        <StackBadges />
         <ResearchList />
+        <Education />
+        <StackBadges />
+        <Certs />
       </main>
       <SiteFooter />
     </div>
