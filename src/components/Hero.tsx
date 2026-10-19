@@ -2,9 +2,15 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { profile } from '@/data/profile'
 
-export function Hero() {
+type HeroProps = {
+  pathOpen: boolean
+  onOpenPath: () => void
+  onClosePath: () => void
+}
+
+export function Hero({ pathOpen, onOpenPath, onClosePath }: HeroProps) {
   return (
-    <section id="hero" className="border-b border-slate-800">
+    <section id="hero" className="relative z-10 border-b border-slate-800 bg-slate-950">
       <div className="mx-auto max-w-5xl px-6 pb-16 pt-20 md:pb-24 md:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -30,7 +36,19 @@ export function Hero() {
                 Download CV
               </Button>
             </a>
+            {pathOpen ? (
+              <Button size="lg" variant="ghost" type="button" onClick={onClosePath}>
+                Hide path experience
+              </Button>
+            ) : (
+              <Button size="lg" variant="ghost" type="button" onClick={onOpenPath}>
+                Play path experience
+              </Button>
+            )}
           </div>
+          <p className="mt-3 font-mono text-[10px] text-slate-600">
+            Optional · scroll-linked market tape (illustrative) — not required to browse the CV
+          </p>
           <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs text-slate-500">
             <a href={`mailto:${profile.email}`} className="hover:text-slate-300">
               {profile.email}
